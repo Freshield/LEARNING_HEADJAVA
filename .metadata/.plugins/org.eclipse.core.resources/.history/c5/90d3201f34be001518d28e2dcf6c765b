@@ -15,13 +15,11 @@ public class Loopy {
 
 		System.out.println("This is after the loop");
 		
-		x = 2;
+		x = 3;
 		if(x == 3)
 		{
 			System.out.println("x must be 3");
 			
-		}else{
-			System.out.println("x is not 3");
 		}
 		
 	}
