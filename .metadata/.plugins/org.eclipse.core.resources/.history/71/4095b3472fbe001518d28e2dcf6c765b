@@ -1,0 +1,15 @@
+package test2;
+
+public class test2 {
+
+	public static void main(String[] args) {
+		System.out.println("I Rule");
+		System.out.println("The World");
+		int x = 3;
+		String name = "Dirk";
+		System.out.print("x is" + x);
+		double d = Math.random();
+
+	}
+
+}
