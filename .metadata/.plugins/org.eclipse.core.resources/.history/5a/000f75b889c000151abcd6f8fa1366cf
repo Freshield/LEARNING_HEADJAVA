@@ -1,0 +1,19 @@
+package chp2_1;
+
+public class Dog {
+	
+	int size;
+	String breed;
+	String name;
+	
+	
+	void bard()
+	{
+		System.out.println("Ruff!Ruff!");
+	}
+	
+	
+	
+	
+
+}
