@@ -27,6 +27,11 @@ public class MathTest {
 		MathTest t = new MathTest();
 		t.doNumsNewWay();
 		
+		Integer i = new Integer(5);
+		System.out.println(i);
+		int yy = i;
+		System.out.println(yy);
+		
 
 	}
 
