@@ -1,0 +1,14 @@
+package chp10_5;
+
+public class MathTest {
+
+	public static void main(String[] args) {
+		
+		double r1 = Math.random();
+		int r2 = (int) (Math.random()*5);
+		
+		System.out.println(r1+" "+r2);
+
+	}
+
+}
