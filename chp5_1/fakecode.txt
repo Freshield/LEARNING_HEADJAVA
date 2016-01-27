@@ -1,0 +1,74 @@
+
+DECLARE an int array to hold the location cells. Call it locationCells.
+DECLARE an int to hold the number of hits. Call it numOfHits and SET it to 0.
+----------------------------------------------------------------------------
+DECLARE a checkYourself() method that takes a String for the user's guss("1","3",etc), checks it , and returns a result representing a "hit""miss"or "kill"
+DECLARE a setLocationCells() setter method that takes an int array(which has the three cell locations as ints(2,3,4,etc)
+--------------------------------------------------------------------------------
+METHOD: String checkYourself(String userGuess)
+    GET the user guess as a String parameter
+    CONVERT the user guess to an int
+    REPEAT with each of the location cells in the int array
+        COMPARE the user guess to the locaiton cell
+            IF the user guess matches
+                INCREMENT the number of hits
+                FIND OUT if it was the last location cell;
+                IF number of hits is 3,RETURN "kill" as the result
+                ELSE it was not a kill,so RETURN "hit"
+                END IF
+            ELSE the user guess did not match, so RETURN "miss"
+            END IF
+    END REPEAT
+END METHOD
+
+METHOD: void setLocationCells(int[] cellLocations)
+    GET the cell locations as an int array parameter
+    ASSIGN the cell locations parameter to the cell locations instance variable
+END METHOD
+
+
+
+METHOD public static void main(String[] args)
+    DECLARE an int variable to hold the number of user guesses, named numOfGuesses, set it to 0.
+    MAKE a new SimpleDotCom instance
+    COMPUTE a random number between 0 and 4 that will be the starting location cell position
+    MAKE an int array with 3 ints using the 
+        Print word enter a number 
+        WAIT user's input
+        CHECK the input
+    
+    
+    
+    
+    WHILE the dot com is still alive:
+        GET user imput from the command line
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
