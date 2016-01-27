@@ -1,0 +1,10 @@
+package chp4_3;
+
+public class GoodDogTestDrive {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
