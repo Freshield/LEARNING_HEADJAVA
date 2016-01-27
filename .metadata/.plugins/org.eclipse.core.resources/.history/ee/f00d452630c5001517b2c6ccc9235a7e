@@ -1,0 +1,10 @@
+package chp4_2;
+
+public class DogTestDrive {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
