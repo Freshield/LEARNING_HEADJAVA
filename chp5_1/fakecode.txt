@@ -8,12 +8,12 @@ DECLARE a setLocationCells() setter method that takes an int array(which has the
 METHOD: String checkYourself(String userGuess)
     GET the user guess as a String parameter
     CONVERT the user guess to an int
-    REPEAT with each of the location cells in the int array
+    REPEAT with each of the remaining location cells in the int array
         COMPARE the user guess to the locaiton cell
             IF the user guess matches
-                INCREMENT the number of hits
+                REMOVE this cell from the array
                 FIND OUT if it was the last location cell;
-                IF number of hits is 3,RETURN "kill" as the result
+                IF the array is empty,RETURN "kill" as the result
                 ELSE it was not a kill,so RETURN "hit"
                 END IF
             ELSE the user guess did not match, so RETURN "miss"
