@@ -1,0 +1,10 @@
+package chp10_4;
+
+public class FooTestDrive {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
