@@ -3,7 +3,7 @@ package chp10_2;
 public class Duck {
 	
 	private int size;
-	private static int duckCount = 0;
+	static int duckCount = 0;
 	
 	public Duck()
 	{
