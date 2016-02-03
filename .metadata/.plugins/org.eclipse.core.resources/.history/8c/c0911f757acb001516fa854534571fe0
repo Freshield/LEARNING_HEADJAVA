@@ -2,9 +2,9 @@ package chp9_3;
 
 public class Hippo extends Animal {
 	
-	public Hippo(String name)
+	public Hippo()
 	{
-		super(name);
+		super();
 		System.out.println("Making a Hippo");
 	}
 

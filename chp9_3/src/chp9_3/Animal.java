@@ -1,10 +1,17 @@
 package chp9_3;
 
-public class Animal {
+public abstract class Animal {
+	private String name;
 	
-	public Animal()
+	public Animal(String theName)
 	{
+		name = theName;
 		System.out.println("Making an Animal");
+	}
+	
+	public String getName()
+	{
+		return name;
 	}
 
 }

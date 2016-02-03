@@ -6,8 +6,7 @@ public class TestHippo {
 		
 		System.out.println("Starting...");
 		
-		Hippo h = new Hippo("Buffy");
-		System.out.println(h.getName());
+		Hippo h = new Hippo();
 
 	}
 
