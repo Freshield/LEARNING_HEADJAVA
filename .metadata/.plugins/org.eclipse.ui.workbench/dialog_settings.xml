@@ -19,8 +19,8 @@
 	<section name="InstallationDialogSettings">
 		<item value="1642" key="DIALOG_WIDTH"/>
 		<item value="-484" key="DIALOG_Y_ORIGIN"/>
-		<item value="-188" key="DIALOG_X_ORIGIN"/>
 		<item value="1700" key="DIALOG_HEIGHT"/>
+		<item value="-188" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-30|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
 	</section>
 </section>
