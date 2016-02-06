@@ -6,7 +6,6 @@ public class Duck {
 	public Duck()
 	{
 		size = 34;
-		System.out.println("size is "+size);
 	}
 	public Duck(int ducksize)
 	{
