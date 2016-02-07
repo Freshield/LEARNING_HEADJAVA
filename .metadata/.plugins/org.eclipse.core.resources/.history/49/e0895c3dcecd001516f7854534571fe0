@@ -3,10 +3,10 @@ package chp9_1;
 public class Duck {
 	int size;
 	
-	public Duck(int ducksize)
+	public Duck()
 	{
-		size = ducksize;
-		System.out.println("size is "+size);
+		size = 34;
+		System.out.println("Quack");
 	}
 	
 	public void setSize(int newSize)

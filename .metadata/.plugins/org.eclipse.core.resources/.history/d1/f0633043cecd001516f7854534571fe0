@@ -4,7 +4,7 @@ public class UseADuck {
 
 	public static void main(String[] args) {
 		
-		Duck d = new Duck(34);
+		Duck d = new Duck();
 		
 		System.out.println(d.size);
 		
