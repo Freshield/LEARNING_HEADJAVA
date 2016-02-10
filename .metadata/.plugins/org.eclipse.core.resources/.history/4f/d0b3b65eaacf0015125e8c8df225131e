@@ -11,19 +11,18 @@ public class MonsterTestDrive {
 		ma[1] = new Dragon();
 		ma[2] = new Monster();
 		
+		Vampire v;
 		
-		
-		if(ma[1] instanceof Vampire)
+		if(ma[0] instanceof Vampire)
 		{
-			Vampire v = (Vampire) ma[1];
-			v.test();
+			v = (Vampire) ma[0];
 		}
 		
 		for(int x = 0; x<3;x++)
 		{
 			ma[x].frighten(x);
 		}
-		
+		v.test();
 		//ma[0].test();
 		
 		

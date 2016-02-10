@@ -15,7 +15,7 @@ public class MonsterTestDrive {
 		
 		if(ma[1] instanceof Vampire)
 		{
-			Vampire v = (Vampire) ma[1];
+			Vampire v = (Vampire) ma[0];
 			v.test();
 		}
 		
