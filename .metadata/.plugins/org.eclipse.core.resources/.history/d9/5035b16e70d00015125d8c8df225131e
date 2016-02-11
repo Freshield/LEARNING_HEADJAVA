@@ -1,7 +1,6 @@
 package chp7_2;
 
 public class MonsterTestDrive {
-	
 
 	public static void main(String[] args) {
 		
@@ -19,7 +18,6 @@ public class MonsterTestDrive {
 		}
 		v.test();
 		//ma[0].test();
-		
 		
 
 	}
@@ -58,3 +56,4 @@ class Dragon extends Monster
 	}
 	
 }
+
