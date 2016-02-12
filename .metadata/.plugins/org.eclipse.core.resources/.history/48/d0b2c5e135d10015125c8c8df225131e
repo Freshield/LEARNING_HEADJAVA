@@ -10,13 +10,11 @@ public class MonsterTestDrive {
 		ma[1] = new Dragon();
 		ma[2] = new Monster();
 		
-		Vampire v = new Vampire();
-		
 		for(int x = 0; x<3;x++)
 		{
 			ma[x].frighten(x);
 		}
-		v.test();
+		
 		
 
 	}
