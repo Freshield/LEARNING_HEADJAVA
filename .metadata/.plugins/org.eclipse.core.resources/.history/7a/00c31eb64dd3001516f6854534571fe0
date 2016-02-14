@@ -1,0 +1,10 @@
+package chp9_1;
+
+public class Duck {
+	public Duck()
+	{
+		size = 34;
+		System.out.println("Quack");
+	}
+
+}
