@@ -6,7 +6,7 @@ public class PlayerTestDrive {
 		
 		System.out.println(Player.playerCount);
 		Player one = new Player("Tiger Woods");
-		System.out.println(one.playerCount);
+		System.out.println(Player.playerCount);
 		
 
 	}
