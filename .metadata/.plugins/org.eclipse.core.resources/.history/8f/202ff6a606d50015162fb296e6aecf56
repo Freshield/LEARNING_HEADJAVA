@@ -1,0 +1,12 @@
+package chp12_3;
+
+public class MyDrawPanelDrive {
+
+	public static void main(String[] args) {
+		
+		MyDrawPanelDrive panel = new MyDrawPanelDrive();
+		
+
+	}
+
+}
