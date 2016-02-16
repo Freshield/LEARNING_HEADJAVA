@@ -18,12 +18,12 @@ public class MusicTest1 {
 			
 			ShortMessage a = new ShortMessage();
 			a.setMessage(144,1,44,100);
-			MidiEvent noteOn = new MidiEvent(a,1);
+			MidiEvent noteOn = new MidiEvent(a,13);
 			track.add(noteOn);
 			
 			ShortMessage b = new ShortMessage();
-			a.setMessage(128,1,44,100);
-			MidiEvent noteOff = new MidiEvent(b,16);
+			b.setMessage(192,1,102,100);
+			MidiEvent noteOff = new MidiEvent(b,24);
 			track.add(noteOff);
 			
 			player.setSequence(seq);
