@@ -1,0 +1,35 @@
+package chp12_4;
+
+public class MyOuterClass {
+	
+	private int x = 0;
+
+	public static void main(String[] args) {
+		
+		MyOuterClass c = new MyOuterClass();
+		
+		System.out.println(c.getter());
+		
+		
+		
+		
+		
+
+	}
+	
+	public int getter(){
+		
+		return x;
+	}
+	
+	class MyInnerClass{
+		
+		void go(){
+			
+			x = 42;
+			
+		}
+		
+	}
+
+}
