@@ -27,7 +27,11 @@ public void go(){
 		
 		text.setText("Not all who are lost are wandering");
 		
-		frame.getContentPane().add(BorderLayout.CENTER, scroller);
+		
+		JPanel panel = new JPanel();
+		panel.add(scroller);
+		
+		frame.getContentPane().add(BorderLayout.CENTER, panel);
 		
 		
 		
