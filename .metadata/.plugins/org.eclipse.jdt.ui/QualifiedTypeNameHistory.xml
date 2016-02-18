@@ -7,8 +7,6 @@
 <fullyQualifiedTypeName name="chp12_4.MyOuterClass.MyInnerClass"/>
 <fullyQualifiedTypeName name="javax.swing.JFrame"/>
 <fullyQualifiedTypeName name="javax.swing.JLabel"/>
-<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
-<fullyQualifiedTypeName name="javax.swing.JButton"/>
 <fullyQualifiedTypeName name="chp12_5.TwoButtons.LabelListener"/>
 <fullyQualifiedTypeName name="chp12_5.TwoButtons.ColorListener"/>
 <fullyQualifiedTypeName name="chp12_5.TwoButtons"/>
@@ -21,7 +19,6 @@
 <fullyQualifiedTypeName name="javax.sound.midi.MidiEvent"/>
 <fullyQualifiedTypeName name="javax.sound.midi.Sequencer"/>
 <fullyQualifiedTypeName name="javax.sound.midi.MidiSystem"/>
-<fullyQualifiedTypeName name="javax.sound.midi.Sequence"/>
 <fullyQualifiedTypeName name="chp12_9.MiniMusicPlayer2"/>
 <fullyQualifiedTypeName name="javax.sound.midi.ControllerEventListener"/>
 <fullyQualifiedTypeName name="javax.sound.midi.ShortMessage"/>
@@ -32,8 +29,24 @@
 <fullyQualifiedTypeName name="chp12_10.InnerButton"/>
 <fullyQualifiedTypeName name="java.awt.Graphics"/>
 <fullyQualifiedTypeName name="chp12_11.Animate.MyDrawPanel"/>
-<fullyQualifiedTypeName name="java.awt.BorderLayout"/>
-<fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="chp12_11.Animate"/>
+<fullyQualifiedTypeName name="javax.swing.JButton"/>
 <fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="javax.swing.JTextField"/>
+<fullyQualifiedTypeName name="java.awt.TextField"/>
+<fullyQualifiedTypeName name="chp13_4.TextFieldTest"/>
+<fullyQualifiedTypeName name="java.awt.FileDialog"/>
+<fullyQualifiedTypeName name="javax.swing.JTextArea"/>
+<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+<fullyQualifiedTypeName name="chp13_5.TextArea1"/>
+<fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
+<fullyQualifiedTypeName name="javax.swing.ScrollPaneConstants"/>
+<fullyQualifiedTypeName name="javax.swing.BorderFactory"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="javax.swing.JCheckBox"/>
+<fullyQualifiedTypeName name="javax.swing.BoxLayout"/>
+<fullyQualifiedTypeName name="chp13_6.BeatBox"/>
+<fullyQualifiedTypeName name="java.awt.BorderLayout"/>
+<fullyQualifiedTypeName name="javax.sound.midi.Sequence"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
 </qualifiedTypeNameHistroy>
