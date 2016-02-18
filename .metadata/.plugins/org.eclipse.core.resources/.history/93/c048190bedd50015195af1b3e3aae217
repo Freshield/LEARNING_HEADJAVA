@@ -1,0 +1,10 @@
+package chp14_5;
+
+public class ReadAFile {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
