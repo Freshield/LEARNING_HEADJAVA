@@ -7,6 +7,13 @@ public class MyRunnalbe implements Runnable{
 	}
 	
 	public void go(){
+		try{
+			
+			Thread.sleep(20);
+			
+		}catch(InterruptedException ex){
+			ex.printStackTrace();
+		}
 		doMore();
 	}
 	
