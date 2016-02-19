@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="chp12_10.InnerButton"/>
-<fullyQualifiedTypeName name="java.awt.Graphics"/>
-<fullyQualifiedTypeName name="chp12_11.Animate.MyDrawPanel"/>
-<fullyQualifiedTypeName name="chp12_11.Animate"/>
-<fullyQualifiedTypeName name="javax.swing.JButton"/>
-<fullyQualifiedTypeName name="java.awt.Color"/>
 <fullyQualifiedTypeName name="java.awt.TextField"/>
 <fullyQualifiedTypeName name="chp13_4.TextFieldTest"/>
 <fullyQualifiedTypeName name="java.awt.FileDialog"/>
@@ -21,10 +15,7 @@
 <fullyQualifiedTypeName name="chp14_4.QuizCard"/>
 <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
 <fullyQualifiedTypeName name="java.io.FileWriter"/>
-<fullyQualifiedTypeName name="javax.swing.JTextArea"/>
 <fullyQualifiedTypeName name="chp14_6.QuizCardPlayer"/>
-<fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
-<fullyQualifiedTypeName name="javax.swing.ScrollPaneConstants"/>
 <fullyQualifiedTypeName name="javax.swing.JMenuBar"/>
 <fullyQualifiedTypeName name="javax.swing.JMenu"/>
 <fullyQualifiedTypeName name="javax.swing.JMenuItem"/>
@@ -41,23 +32,32 @@
 <fullyQualifiedTypeName name="chp14_7.DungeonGame"/>
 <fullyQualifiedTypeName name="java.io.Serializable"/>
 <fullyQualifiedTypeName name="chp15_1.DailyAdviceClient"/>
-<fullyQualifiedTypeName name="java.io.InputStream"/>
-<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
-<fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="chp15_1.DailAdviceServer"/>
-<fullyQualifiedTypeName name="java.net.ServerSocket"/>
 <fullyQualifiedTypeName name="javax.tools.SimpleJavaFileObject"/>
 <fullyQualifiedTypeName name="chp15_2.SimpleChatClientA"/>
-<fullyQualifiedTypeName name="javax.swing.JTextField"/>
-<fullyQualifiedTypeName name="java.awt.BorderLayout"/>
-<fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="java.net.Socket"/>
-<fullyQualifiedTypeName name="java.io.PrintWriter"/>
-<fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="java.lang.Runnable"/>
 <fullyQualifiedTypeName name="chp15_3.MyRunnalbe"/>
 <fullyQualifiedTypeName name="chp15_4.RunThreads"/>
-<fullyQualifiedTypeName name="java.lang.InterruptedException"/>
 <fullyQualifiedTypeName name="chp15_5.RyanAndMonicaJob"/>
 <fullyQualifiedTypeName name="chp15_5.BankAccount"/>
+<fullyQualifiedTypeName name="chp15_6.TestSync"/>
+<fullyQualifiedTypeName name="javax.swing.JTextArea"/>
+<fullyQualifiedTypeName name="chp15_7.SimpleChatClient"/>
+<fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
+<fullyQualifiedTypeName name="javax.swing.ScrollPaneConstants"/>
+<fullyQualifiedTypeName name="javax.swing.JTextField"/>
+<fullyQualifiedTypeName name="java.awt.BorderLayout"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="chp15_7.VerySimpleChatServer"/>
+<fullyQualifiedTypeName name="java.net.ServerSocket"/>
+<fullyQualifiedTypeName name="chp15_7.VerySimpleChatServer.ClientHandler"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.lang.InterruptedException"/>
+<fullyQualifiedTypeName name="chp15_8.ThreadOne"/>
+<fullyQualifiedTypeName name="chp15_8.ThreadTwo"/>
 </qualifiedTypeNameHistroy>
