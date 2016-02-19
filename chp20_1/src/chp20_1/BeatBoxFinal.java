@@ -154,6 +154,7 @@ public class BeatBoxFinal {
 			
 		}
 		
+		theFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		theFrame.setBounds(50,50,300,300);
 		theFrame.pack();
 		theFrame.setVisible(true);
@@ -192,32 +193,34 @@ public class BeatBoxFinal {
 	
 	public void buildTrackAndStart(){
 		
-		ArrayList<Integer> trackList = null;
+		int[] trackList = null;
+		
+
 		setUpMidi();
 		sequence.deleteTrack(track);
 		track = sequence.createTrack();
 		
 		for(int i = 0;i<16;i++){
+			trackList = new int[16];
 			
-			trackList = new ArrayList<Integer>();
+			int key = instruments[i];
 			
 			for(int j = 0;j<16;j++){
 				
-				JCheckBox jc = (JCheckBox) checkboxList.get(j+(i*16));
+				
+				JCheckBox jc = (JCheckBox) checkboxList.get(j+(16*i));
 				if(jc.isSelected()){
 					
-					int key = instruments[i];
-					trackList.add(new Integer(key));
+					trackList[j] = key;
 					
 				}else{
 					
-					trackList.add(null);
+					trackList[j] = 0;
 				}
-				makeTracks(trackList);
-				
 			}
 			
-			track.add(makeEvent(192,9,1,0,15));
+			makeTracks(trackList);
+			track.add(makeEvent(176,1,127,0,16));
 			try{
 				
 				sequencer.setSequence(sequence);
@@ -225,25 +228,28 @@ public class BeatBoxFinal {
 				sequencer.start();
 				sequencer.setTempoInBPM(120);
 				
-			}catch(Exception ex){
-				ex.printStackTrace();
+				
+			}catch(Exception e){
+				
+				e.printStackTrace();
 			}
+			
+			
 		}
 		
 		
 	}
 	
-	public void makeTracks(ArrayList list){
+	public void makeTracks(int[] list){
 		
-		Iterator it = list.iterator();
-		for(int i = 0;i<16;i++){
+			for(int i = 0;i<16;i++){
 			
-			Integer num = (Integer) it.next();
-			if(num != null){
+			int key = list[i];
+			
+			if(key != 0){
 				
-				int numKey = num.intValue();
-				track.add(makeEvent(144,9,numKey,100,i));
-				track.add(makeEvent(128, 9, numKey, 100, i+1))
+				track.add(makeEvent(144,9,key,100,i));
+				track.add(makeEvent(128,9,key,100,i+2));
 			}
 			
 		}
