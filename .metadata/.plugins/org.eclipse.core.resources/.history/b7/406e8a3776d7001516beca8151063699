@@ -18,20 +18,14 @@ public class Jukebox6 {
 		getSongs();
 		System.out.println(songList);
 		TitleCompare titlecompare = new TitleCompare();
-		ArtistCompare artistcompare = new ArtistCompare();
 		Collections.sort(songList,titlecompare);
 		System.out.println(songList);
 
 		HashSet<Song> songSet = new HashSet<Song>();
 		songSet.addAll(songList);
 		System.out.println(songSet);
-		
-		TreeSet<Song> songSetT = new TreeSet<>(artistcompare);
-		songSetT.addAll(songList);
-		System.out.println(songSetT);
-		
 
-		
+		Collections.sort(songSet, titlecompart);
 	}
 
 	public class TitleCompare implements Comparator<Song>{
