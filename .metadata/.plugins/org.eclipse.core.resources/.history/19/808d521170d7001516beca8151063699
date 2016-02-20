@@ -17,8 +17,8 @@ public class Jukeboc3 {
 		
 		getSongs();
 		System.out.println(songList);
-		TitleCompare titlecompare = new TitleCompare();
-		Collections.sort(songList,titlecompare);
+		//TitleCompare titlecompare = new TitleCompare();
+		//Collections.sort(songList,titlecompare);
 		System.out.println(songList);
 		
 		ArtistCompare artistCompare = new ArtistCompare();

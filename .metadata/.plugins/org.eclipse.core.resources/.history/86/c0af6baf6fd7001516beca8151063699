@@ -1,6 +1,6 @@
 package chp16_2;
 
-public class Song{
+public class Song implements Comparable<Song>{
 	
 	String title;
 	String artist;
@@ -15,6 +15,10 @@ public class Song{
 		bpm = b;
 	}
 	
+	public int compareTo(Song s){
+		
+		return title.compareTo(s.getTitle());
+	}
 	
 	public String getTitle(){
 		return title;

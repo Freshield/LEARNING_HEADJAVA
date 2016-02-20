@@ -17,22 +17,14 @@ public class Jukeboc3 {
 		
 		getSongs();
 		System.out.println(songList);
-		TitleCompare titlecompare = new TitleCompare();
-		Collections.sort(songList,titlecompare);
+		Collections.sort(songList);
 		System.out.println(songList);
 		
 		ArtistCompare artistCompare = new ArtistCompare();
 		Collections.sort(songList, artistCompare);
-		System.out.println(songList);
 		
 	}
-
-	public class TitleCompare implements Comparator<Song>{
-		
-		public int compare(Song one,Song two){
-			return one.getTitle().compareTo(two.getTitle());
-		}
-	}
+	
 	public class ArtistCompare implements Comparator<Song>{
 		
 		public int compare(Song one,Song two){
