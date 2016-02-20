@@ -1,0 +1,5 @@
+package chp18_1;
+
+public interface MyRemote {
+
+}
