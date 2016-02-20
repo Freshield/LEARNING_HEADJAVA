@@ -16,9 +16,9 @@ public class TestGenerics1 {
 		animals.add(new Dog());
 		
 		ArrayList<Dog> dogs = new ArrayList<Dog>();
-		animals.add(new Dog());
-		animals.add(new Dog());
-		animals.add(new Dog());
+		dogs.add(new Dog());
+		dogs.add(new Dog());
+		dogs.add(new Dog());
 		
 		//Animal[] animals = {new Dog(),new Cat(),new Dog()};
 		//Dog[] dogs = {new Dog(),new Dog(),new Dog()};
