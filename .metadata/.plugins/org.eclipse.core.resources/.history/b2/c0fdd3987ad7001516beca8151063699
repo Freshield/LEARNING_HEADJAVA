@@ -1,0 +1,10 @@
+package chp16_7;
+
+public class TestGenerics1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
