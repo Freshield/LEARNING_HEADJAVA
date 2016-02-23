@@ -39,6 +39,11 @@ public class Server {
 	
 	public void go(){
 		
+		for(int i = 0;i<31;i++){
+			
+			System.out.println("put(\""+new Integer(i).toString()+"\",\""+animal_list.getString(new Integer(i).toString())+"\");");
+		}
+		
 		try{
 			
 			frame = new JFrame();

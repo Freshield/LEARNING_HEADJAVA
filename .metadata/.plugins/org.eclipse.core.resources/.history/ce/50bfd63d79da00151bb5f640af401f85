@@ -1,0 +1,55 @@
+package probuf_server;
+
+import java.util.*;
+import com.google.protobuf.InvalidProtocolBufferException;
+import com.protobuf.AnimalList;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.lang.Runtime;
+import java.io.IOException;
+
+public class Server {
+	
+	private HashMap<String, String> map = new HashMap<String, String>() {
+	    {
+	    	put("0","Does it can fly?");
+	    	put("1","Does it eat meat?");
+	    	put("2","Does it have soft fur?");
+	    	put("3","Does it run fast?");
+	    	put("4","Cow");
+	    	put("5","Horse");
+	    	put("6","Does it has red eye?");
+	    	put("7","Sheep");
+	    	put("8","Rabbit");
+	    	put("9","Does it is a pet?");
+	    	put("10","Does it has legs?");
+	    	put("11","Snake");
+	    	put("12","Lion");
+	    	put("13","Does it need walk everyday?");
+	    	put("14","Cat");
+	    	put("15","Dog");
+	    	put("16","Does it eat meat?");
+	    	put("17","Does it looked beautiful?");
+	    	put("18","Does it drink blood?");
+	    	put("19","Fly");
+	    	put("20","Mosquito");
+	    	put("21","Does it lives around water?");
+	    	put("22","Butterfly");
+	    	put("23","Dragonfly");
+	    	put("24","Does it lives around water?");
+	    	put("25","Does it act during the night?");
+	    	put("26","Woodpecker");
+	    	put("27","Bat");
+	    	put("28","Does it big?");
+	    	put("29","Duck");
+	    	put("30","Goose");
+	    }
+	};
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

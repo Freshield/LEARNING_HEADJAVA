@@ -1,0 +1,19 @@
+package probuf_server;
+
+import java.util.List;
+import com.google.protobuf.InvalidProtocolBufferException;
+import com.protobuf.AnimalList;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.lang.Runtime;
+import java.io.IOException;
+
+public class Server {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
