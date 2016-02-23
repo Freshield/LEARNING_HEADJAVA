@@ -1,0 +1,60 @@
+package assignment1;
+
+import java.io.*;
+import java.net.*;
+import org.json.*;
+
+public class Server {
+	
+
+    private JSONObject animal_list = new JSONObject("{"
+    		+ "'0':'Cow','1':'Horse','2':'Sheep','3':'Rabbit','4':'Snake',"
+    		+ "'5':'Lion','6':'Cat','7':'Dog','8':'Fly','9':'mosquito',"
+    		+ "'10':'Butterfly','11':'Dragonfly','12':'Bat','13':'Woodpecker',"
+    		+ "'14':'Duck','15':'Goose'}");
+
+	public static void main(String[] args) {
+		
+		new Server().go();
+
+	}
+	
+	public void go(){
+		
+		try{
+			
+			
+			ServerSocket serverSock = new ServerSocket(2333);
+			
+			while(true){
+				
+				
+				
+				JSONObject obj = new JSONObject();
+				
+				obj.put("name", "yy");
+				obj.put("sex", "man");
+				obj.put("age", "25");
+				
+				System.out.println(obj);
+				System.out.println(obj.getString("sex"));
+				
+				
+				Socket sock = serverSock.accept();
+				
+				PrintWriter writer = new PrintWriter(sock.getOutputStream());
+				
+				String information = "server connect sucessful";
+				writer.println(animal_list);
+				writer.close();
+				
+				System.out.println("connect sucessful");
+			}
+			
+			
+		}catch(IOException ex){
+			ex.printStackTrace();
+		}
+	}
+
+}

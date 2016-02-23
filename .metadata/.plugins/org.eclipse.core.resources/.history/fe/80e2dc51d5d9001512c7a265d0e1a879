@@ -1,0 +1,78 @@
+package assignment1;
+
+import java.io.*;
+import java.net.*;
+import org.json.*;
+
+public class Server {
+	
+	private String list = "{"
+    		+ "'4':'Cow','5':'Horse','7':'Sheep','8':'Rabbit','11':'Snake',"
+    		+ "'12':'Lion','14':'Cat','15':'Dog','19':'Fly','20':'mosquito',"
+    		+ "'22':'Butterfly','23':'Dragonfly','26':'Bat','27':'Woodpecker',"
+    		+ "'29':'Duck','30':'Goose',"
+    		+ "'0':'Does it can fly?','1':'Does it eat meat?','2':'Does it have soft fur?',"
+    		+ "'3':'Does it run fast?','6':'Does it has red eye?','9':'Does it is a pet?',"
+    		+ "'10':'Does it has legs?','13':'Does it need walk everyday?',"
+    		+ "'16':'Does it eat meat?','17':'Does it looked beautiful?',"
+    		+ "'18':'Does it drink blood?','21':'Does it lives around water?',"
+    		+ "'24':'Does it lives around water?','25':'Does it act during the night?',"
+    		+ "'28':'Does it big?'}";
+	
+
+    private JSONObject animal_list = new JSONObject(list);
+    
+    private BufferedReader reader;
+    
+
+	public static void main(String[] args) {
+		
+		new Server().go();
+
+	}
+	
+	public void go(){
+		
+		try{
+			
+			
+			ServerSocket serverSock = new ServerSocket(2333);
+
+			Socket sock = serverSock.accept();
+
+			PrintWriter writer = new PrintWriter(sock.getOutputStream());
+			InputStreamReader isReader = new InputStreamReader(sock.getInputStream());
+			reader = new BufferedReader(isReader);
+			
+			JSONObject buf = new JSONObject();
+			buf.put("value", "Welcome to Animal guess game~Are you ready?");
+
+			writer.println(buf);
+			writer.close();
+			
+			System.out.println("connect sucessful");
+			
+			String getter;
+			
+			while(true){
+				while((getter = reader.readLine()) != null){
+					
+					System.out.println(getter);
+					buf = new JSONObject();
+					buf.put("value", animal_list.getString(getter));
+					writer.println(buf);
+					writer.close();
+					
+					
+				}
+				
+				
+			}
+			
+			
+		}catch(IOException ex){
+			ex.printStackTrace();
+		}
+	}
+
+}

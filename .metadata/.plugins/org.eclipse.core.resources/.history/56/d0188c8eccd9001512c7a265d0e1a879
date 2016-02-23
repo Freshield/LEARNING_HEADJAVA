@@ -1,0 +1,53 @@
+package assignment1;
+
+import java.io.*;
+import java.net.*;
+import org.json.*;
+
+public class Server {
+
+	public static void main(String[] args) {
+		
+		new Server().go();
+
+	}
+	
+	public void go(){
+		
+		try{
+			
+			
+			ServerSocket serverSock = new ServerSocket(2333);
+			
+			while(true){
+				
+				
+				
+				JSONObject obj = new JSONObject();
+				
+				obj.put("name", "yy");
+				obj.put("sex", "man");
+				obj.put("age", "25");
+				
+				System.out.println(obj);
+				System.out.println(obj.getString("sex"));
+				
+				
+				Socket sock = serverSock.accept();
+				
+				PrintWriter writer = new PrintWriter(sock.getOutputStream());
+				
+				String information = "server connect sucessful";
+				writer.println(obj);
+				writer.close();
+				
+				System.out.println("connect sucessful");
+			}
+			
+			
+		}catch(IOException ex){
+			ex.printStackTrace();
+		}
+	}
+
+}
