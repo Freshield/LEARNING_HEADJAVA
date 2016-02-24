@@ -109,10 +109,8 @@ public class Server {
 				builder.setId("server");
 				builder.setName("Welcome to Animal guess game~Are you ready?");
 				AnimalList.Animal animal = builder.build();
-				byte[] outter = new byte[100];
-			    outter = animal.toByteArray();
-		        doutput.write(outter);
-				System.out.println("go"+animal.toString());
+				animal.writeTo(doutput);
+				System.out.println(animal.toString());
 				
 			}
 		}catch(IOException ex){
@@ -144,26 +142,12 @@ public class Server {
 			
 			String message;
 			String getResult;
-			//DataInputStream dbuffer;
-			
 			try{
 				//when get inputstream
-				System.out.println("thread waitting data");
-				
-				byte len[] = new byte[1024];
-                int count; 
-            
-				while((count = dinput.read(len)) != 0){
-					System.out.println("thread into writting");
-
-	                byte[] temp = new byte[count];
-	                
-	                for (int i = 0; i < count; i++) {   
-	                    
-	                        temp[i] = len[i];                              
-	                } 
+				System.out.println("waitting data");
+				while(dinput.available() != 0){
 					//change to animal type
-					AnimalList.Animal getanimal = AnimalList.Animal.parseFrom(temp);
+					AnimalList.Animal getanimal = AnimalList.Animal.parseFrom(dinput);
 					//get id
 					message = getanimal.getName().toString();
 					text.append(message+"\n");
@@ -174,17 +158,15 @@ public class Server {
 					backer.setId("server");
 					backer.setName(getResult);
 					AnimalList.Animal animalget = backer.build();
-					byte[] outter = animalget.toByteArray();
-			        doutput.write(outter);
-					System.out.println("thread"+animalget.toString());
-					//backer.build().writeTo(doutput);
+					animalget.writeTo(doutput);
+					System.out.println(animalget.toString());
+					backer.build().writeTo(doutput);
 					
 				}
 				
 				
 			}catch(Exception ex){
 				ex.printStackTrace();
-			
 			}
 		}
 		

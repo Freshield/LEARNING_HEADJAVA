@@ -174,10 +174,11 @@ public class Server {
 					backer.setId("server");
 					backer.setName(getResult);
 					AnimalList.Animal animalget = backer.build();
-					byte[] outter = animalget.toByteArray();
+					byte[] outter = new byte[100];
+				    outter = animalget.toByteArray();
 			        doutput.write(outter);
 					System.out.println("thread"+animalget.toString());
-					//backer.build().writeTo(doutput);
+					backer.build().writeTo(doutput);
 					
 				}
 				
