@@ -1,10 +1,20 @@
 package probuf_server;
 
 import java.util.*;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.ScrollPaneConstants;
+
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.protobuf.AnimalList;
 
 import java.lang.Runtime;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.awt.BorderLayout;
 import java.io.*;
 
 public class Server {
@@ -44,6 +54,14 @@ public class Server {
 	    	put("30","Goose");
 	    }
 	};
+	
+
+
+    private JFrame frame;
+    private JPanel panel;
+    private JTextArea text;
+    private DataOutputStream doutput;
+    private byte[] getter;
 
 	public static void main(String[] args) {
 		
@@ -53,41 +71,103 @@ public class Server {
 	
 	public void go(){
 		
-		AnimalList.Animal.Builder builder = AnimalList.Animal.newBuilder();
-		builder.setId("0");
-		builder.setName("YY");
-		
-		AnimalList.Animal animal = builder.build();
-		String buffer = animal.toString();
-		System.out.println(buffer);
-		byte[] buf = animal.toByteArray();
-		
-		
-		File f = new File("buf.txt");
 		try{
+			//GUI
+			frame = new JFrame();
+			panel = new JPanel();
+			text = new JTextArea(25,40);
+			text.setLineWrap(true);
 			
+			JScrollPane scroller = new JScrollPane(text);
+			scroller.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+			scroller.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 			
-			FileOutputStream output = new FileOutputStream("buf.txt");
-			builder.build().writeTo(output);
-			output.close();
+			panel .add(scroller);
 			
+			frame.getContentPane().add(BorderLayout.CENTER, panel);
+			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			frame.setSize(600, 600);
+			frame.setVisible(true);
 			
-			//DataInputStream inp = new DataInputStream(new FileInputStream(new File("buf.txt")));
-			byte[] getter;
-			//ByteArrayOutputStream out1 = new ByteArrayOutputStream();
-			//out1.write(inp.read());
-			//getter = out1.toByteArray();
-			FileInputStream input = new FileInputStream("buf.txt");
+			//socket
 			
-			AnimalList.Animal getanimal = AnimalList.Animal.parseFrom(input);
-			//String theresult = getanimal.toString();
-			System.out.println(getanimal);
+			ServerSocket serverSock = new ServerSocket(2333);
+
 			
-			
-		}catch(Exception ex){
+			while(true){
+				//get sock
+				Socket clientSocket = serverSock.accept();
+
+				doutput = new DataOutputStream(clientSocket.getOutputStream());
+				
+				Thread t = new Thread(new ClientHandler(clientSocket));
+				t.start();
+
+				text.append("connect success\n");
+				
+				//write first welcome information
+				
+				AnimalList.Animal.Builder builder = AnimalList.Animal.newBuilder();
+				builder.setId("server");
+				builder.setName("Welcome to Animal guess game~Are you ready?");
+				//AnimalList.Animal animal = builder.build();
+				builder.build().writeTo(doutput);
+				
+			}
+		}catch(IOException ex){
 			ex.printStackTrace();
 		}
+		
+	}
+	
+
+	public class ClientHandler implements Runnable{
+		
+		
+		private Socket sock;
+	    private DataInputStream dinput;
+		
+		public ClientHandler(Socket clientSocket){
 			
+			try{
+				//get sock and datainputstream
+				sock = clientSocket;
+				dinput = new DataInputStream(sock.getInputStream());
+				
+			}catch(Exception ex){
+				ex.printStackTrace();
+			}
+		}
+		
+		public void run(){
+			
+			String message;
+			String getResult;
+			try{
+				//when get inputstream
+				while(dinput.available() != 0){
+					//change to animal type
+					AnimalList.Animal getanimal = AnimalList.Animal.parseFrom(dinput);
+					//get id
+					message = getanimal.getName().toString();
+					text.append(message+"\n");
+					//find the message
+					getResult = map.get(message);
+					//send back
+					AnimalList.Animal.Builder backer = AnimalList.Animal.newBuilder();
+					backer.setId("server");
+					backer.setName(getResult);
+					backer.build().writeTo(doutput);
+					
+				}
+				
+				
+			}catch(Exception ex){
+				ex.printStackTrace();
+			}
+		}
+		
+		
 	}
 		
 
